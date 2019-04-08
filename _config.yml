@@ -26,7 +26,7 @@ github_username:  ZiweiGu
 
 # Build settings
 markdown: kramdown
-theme: slate
+theme: Slate
 plugins:
   - jekyll-feed
 
