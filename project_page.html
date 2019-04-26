@@ -1,0 +1,15 @@
+---
+title: My Projects
+---
+<h1>My Projects</h1>
+
+<ul>
+  {% for project in site.projects %}
+    <li>
+      <h2><a href="{{ project.url }}">{{ project.project_name }}</a></h2>
+      <h3>{{ project.tag }}</h3>
+      <h3>{{ project.framework }}</h3>
+      <p>{{ project.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>
