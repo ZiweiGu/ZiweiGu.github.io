@@ -1,2 +1,261 @@
 .current {
-  color: green; }
+  color: white;
+  font-weight: bold;
+  border-bottom: 1px solid; }
+
+body {
+  /* font-family: 'Montserrat'; */
+  /* background-color: #bfbfbf; */
+  background-image: linear-gradient(to right, #F0E68C, #FFFFF0); }
+
+h1 {
+  font-family: Comic Sans MS; }
+
+/* ------------- Navigation Bar ------------- */
+#nav_ul {
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 20px 20px;
+  width: 100%;
+  display: inline-block;
+  color: #d7d7d7;
+  list-style-type: none;
+  background-color: #2D2D2D;
+  font-family: Didot;
+  z-index: 999999; }
+
+#nav_ul li {
+  padding: 26px 20px;
+  display: inline;
+  text-decoration: none; }
+
+#nav_ul li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: inherit; }
+
+#nav_ul li a:hover {
+  color: white;
+  font-weight: bold; }
+
+#main_page {
+  font-size: 32px;
+  color: #faf6d2; }
+
+/* ------------- Footer ------------- */
+footer {
+  margin-top: 200px;
+  text-align: center;
+  border: solid #2D2D2D;
+  bottom: 0;
+  width: 101%;
+  height: 135px;
+  /* Height of the footer */
+  background-color: #2D2D2D;
+  color: #d7d7d7;
+  margin-left: -20px; }
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -135px;
+  /* the bottom margin is the negative value of the footer's height */ }
+
+.push {
+  height: 135px;
+  /* .push must be the same height as .footer */ }
+
+/* ------------- Home Page ------------- */
+p {
+  font-family: Verdana;
+  font-size: 20px;
+  margin: 1%; }
+
+#title1 {
+  font-weight: bold;
+  padding: 2%;
+  background-color: #ffdc12;
+  position: sticky;
+  font-size: 20px; }
+
+#basic {
+  margin-top: 0.1%;
+  margin-left: 0.1%; }
+
+.img-with-text {
+  position: static;
+  margin-left: 1%;
+  margin-top: 8%;
+  text-align: justify;
+  width: 500px; }
+
+.img-with-text img {
+  display: block;
+  margin: 0 auto; }
+
+#club_description {
+  position: sticky;
+  margin-left: 58%;
+  margin-top: -38%;
+  margin-right: 3%;
+  margin-bottom: 1%; }
+
+aside.home-liste-news {
+  left: 60%;
+  margin-top: 0.5%;
+  background-color: cornsilk;
+  display: inline-block;
+  width: 33%;
+  vertical-align: top;
+  padding: 12.5px 50px 12.5px 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative; }
+
+aside.home-liste-news ul {
+  padding: 0px; }
+
+aside.home-liste-news ul li {
+  list-style: none;
+  font-size: 0px;
+  padding: 8px 0px;
+  border-bottom: solid 1px Tan;
+  position: relative;
+  left: 0px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
+
+.home-liste-news ul li:hover {
+  left: 26px;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s; }
+
+.home-liste-news ul li a {
+  color: #2a2a29; }
+
+.home-date-news {
+  vertical-align: middle;
+  display: inline-block;
+  background-color: #ffdc12;
+  width: 52px;
+  text-align: center;
+  position: relative;
+  left: -26px;
+  padding: 12px 0px; }
+
+.home-date-news .d-date-news {
+  display: block;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: -12px; }
+
+.home-date-news .m-date-news {
+  text-transform: uppercase;
+  font-size: 10px;
+  display: block;
+  margin-top: 8px; }
+
+.home-date-news .date-alerte img {
+  height: auto;
+  margin-bottom: 0px;
+  width: 42px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.home-infos-news {
+  vertical-align: middle;
+  display: inline-block;
+  width: calc(100% - 60px);
+  margin-left: -10px; }
+
+.home-infos-news a {
+  font-size: 15px;
+  line-height: 18px; }
+
+.home-infos-news h2 {
+  font-size: 17px;
+  margin: 0px;
+  text-transform: uppercase;
+  line-height: 18px;
+  margin-bottom: 5px; }
+
+.home-infos-news span {
+  color: #2a2a29;
+  font-size: 14px;
+  line-height: 16px; }
+
+.underline {
+  text-decoration: underline; }
+
+/* ------------- About Page ------------- */
+#icon_list {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 20px;
+  display: inline-block;
+  list-style-type: none;
+  font-family: Didot;
+  z-index: 999999; }
+
+#nav_ul li {
+  padding: 26px 20px;
+  display: inline;
+  text-decoration: none; }
+
+#nav_ul li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: inherit; }
+
+#nav_ul li a:hover {
+  color: white;
+  font-weight: bold; }
+
+/* ------------- Projects Page ------------- */
+#projects {
+  margin-bottom: 150px;
+  overflow: scroll; }
+
+.box {
+  margin-top: 2%;
+  height: auto;
+  width: 90%; }
+
+fieldset {
+  border: dashed Tan; }
+
+legend {
+  font-size: 30px;
+  font-weight: 800; }
+
+.box {
+  float: left;
+  background-color: Moccasin;
+  padding: 10px;
+  position: relative; }
+
+.box a span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* edit: added z-index */
+  z-index: 1;
+  /* edit: fixes overlap error in IE7/8,
+     make sure you have an empty gif */
+  background-image: url("empty.gif"); }
+
+.box:hover {
+  background-color: BurlyWood; }
+
+.box:active {
+  background-color: #A9A;
+  top: +2px; }
