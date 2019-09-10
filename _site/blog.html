@@ -35,46 +35,55 @@
   </ul>
 </nav>
 
-  <br>
+  <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<div class="main_wrapper">
 <br>
 <br>
 <br>
 <div class="wrapper">
-<h1>Latest Posts</h1>
+<h1 class="h1">Latest Posts</h1>
 
-<ul>
-  
-    <li>
-      <h2><a href="/2019/05/10/Neural-Open-Information-Extraction.html">Neural open information extraction</a></h2>
-      <p><p>Coming soon…</p>
+<div class="row">
+	<div class="col-12 col-md-10 mb-3 mx-auto">
+		
+			<div class="card border-dark bg-light text-dark my-5">
+				<div class='card-body'>
+					<h4 class='card-title'>Building an Interactive Data Dashboard with Bokeh</h4>
+					<p class='card-text'>
+					<small class="text-muted">08/18/2019</small>
+      				<p><p>This summer, I was tasked with building a ML Bias Debugging tool that allows people
+to analyze which features in their datasets were introducing bais to their Machine
+Learning models. Basically, we were trying to develop an interactive dashboard similar to 
+<a href="http://vega.github.io/voyager/">voyager</a> and <a href="http://vega.github.io/polestar/">polestar</a>,
+with the additional requirement of speed, responsiveness, and interactivity. The interface we built allows users to 
+select, group, and label features in their datasets and observe instantaneous changes in ML fairness scores. It also
+includes a causal graph generated from structural learning that further sheds light on the causal relations among features. Existing data visualization tools we could use include JavaScript-based libraries like <a href="https://d3js.org/">D3</a> and <a href="https://vega.github.io/vega/">Vega</a> and Python-based libraries like <a href="https://matplotlib.org/">Matplotlib</a> and 
+<a href="https://plot.ly/">Plotly</a>. We ended up using a fantastic library called <a href="https://bokeh.pydata.org/en/latest/">Bokeh</a>, 
+which provided elegant graphics with lightning interactivity over very large datasets - a perfect match for our use cases.</p>
+
 </p>
-    </li>
-  
-    <li>
-      <h2><a href="/2019/05/09/Applying-NLP-techniques-to-music.html">Applying nlp techniques to music</a></h2>
-      <p><p>Coming soon…</p>
-</p>
-    </li>
-  
-    <li>
-      <h2><a href="/2019/05/04/Training-a-Transformer-Model.html">Training a transformer model</a></h2>
-      <p><p>Coming soon…</p>
-</p>
-    </li>
-  
-    <li>
-      <h2><a href="/2018/04/22/Network-Graphs-with-D3.html">Network graphs with d3</a></h2>
-      <p><p>Coming soon…</p>
-</p>
-    </li>
-  
-</ul>
+      				</p>
+      				<a href="/blog/tutorial/2019/08/18/building-an-interactive-data-dashboard.html" class="stretched-link"></a>
+      			</div>
+			</div>
+		
+	</div>
+</div>
+
 
 <div class="push"></div>
 </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <footer>
-   <p>Contact me: </p>
+   <p class="p">Contact me: </p>
    <a href="https://www.facebook.com/ziwei.gu.7/">
    <img src="/assets/images/facebook.png" alt="Facebook Icon" width = "50" height = "50">
    </a>

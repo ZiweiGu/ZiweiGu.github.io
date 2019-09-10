@@ -1,6 +1,7 @@
 ---
 title: About
 ---
+<div class="main_wrapper">
 <br>
 <br>
 <br>
@@ -11,7 +12,7 @@ title: About
 
 <h1 class="h1">My Portfolio</h1>
 
-<p class="p">I'm excited about building machine learning models and developing all sorts of fun apps. You can find some of my projects on the sites below:</p>
+<p class="p">I'm very passionate about Natural Language Processing, Data Visualization, and Python Full Stack Development. <br>You can find some of my projects on the sites below:</p>
 
 <div id="icon_list">
 
@@ -67,4 +68,5 @@ title: About
 </ul>
 
 <div class="push"></div>
+</div>
 </div>

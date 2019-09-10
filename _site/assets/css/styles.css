@@ -77,7 +77,7 @@ footer {
 
 /* ------------- Home Page ------------- */
 p {
-  font-family: Verdana;
+  font-family: Cambria;
   font-size: 20px;
   margin: 1%; }
 
@@ -94,6 +94,8 @@ p {
   font-size: 20px; }
 
 #basic {
+  font-family: Cambria;
+  font-size: 24px;
   margin-top: 0.1%;
   margin-left: 0.1%; }
 
@@ -205,6 +207,9 @@ aside.home-liste-news ul li {
 .underline {
   text-decoration: underline; }
 
+.main_wrapper {
+  margin: 1%; }
+
 /* ------------- About Page ------------- */
 #icon_list {
   margin: 0 auto;
@@ -235,6 +240,9 @@ aside.home-liste-news ul li {
 
 #imagebubbler {
   background: url("../images/imagebubbler.jpg") center/cover; }
+
+#wikiinsight {
+  background: url("../images/wikipedia.png") center/cover; }
 
 #gallery {
   background: url("../images/gallery.jpg") center/cover; }
@@ -268,3 +276,15 @@ aside.home-liste-news ul li {
 .site_item {
   display: inline-block;
   margin: 20px; }
+
+/* ------------- Post Page ------------- */
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  content: "";
+  background-color: rgba(0, 0, 0, 0); }

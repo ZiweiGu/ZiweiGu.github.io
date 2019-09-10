@@ -5,7 +5,7 @@
 body {
 	/* font-family: 'Montserrat'; */
 	/* background-color: #bfbfbf; */
-	background-image: linear-gradient(to right, #F0E68C, #FFFFF0);
+	background-image: linear-gradient(to right, #F0E68C, #FFFFF0)
 }
 
 h1 {
@@ -88,7 +88,7 @@ footer {
 
 /* ------------- Home Page ------------- */
 p {
-	font-family: Verdana;
+	font-family: Cambria;
 	font-size: 20px;
 	margin: 1%;
 }
@@ -108,6 +108,8 @@ p {
 }
 
 #basic {
+	font-family: Cambria;
+	font-size: 24px;
 	margin-top: 0.1%;
 	margin-left: 0.1%;
 }
@@ -238,8 +240,8 @@ aside.home-liste-news ul li {
 	text-decoration: underline;
 }
 
-#main_wrapper {
-	overflow:scroll;
+.main_wrapper {
+	margin: 1%
 }
 
 /* ------------- About Page ------------- */
@@ -323,3 +325,20 @@ aside.home-liste-news ul li {
 	display: inline-block;
 	margin: 20px;
 }
+
+/* ------------- Post Page ------------- */
+
+.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0,0,0,0);
+}
+
+
+
