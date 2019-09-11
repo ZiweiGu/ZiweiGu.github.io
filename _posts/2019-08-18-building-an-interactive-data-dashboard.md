@@ -1,10 +1,12 @@
 ---
 layout: post
 title: Building an Interactive Data Dashboard with Bokeh
+subtitle: Some words
 author: Ziwei Gu
 categories: [blog, tutorial]
 tags: [Algorithmic Fairness, data visualization, insights]
 publish_date: 08/18/2019
+summary: This is a one-line summary.
 ---
 
 This summer, I was tasked with building a ML Bias Debugging tool that allows people

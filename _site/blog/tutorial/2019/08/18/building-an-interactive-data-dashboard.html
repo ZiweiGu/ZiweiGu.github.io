@@ -1,7 +1,275 @@
-<h1>Building an Interactive Data Dashboard with Bokeh</h1>
+<h1>blogtutorial</h1>
 <p>18 Aug 2019 - Ziwei Gu</p>
 
-<p>This summer, I was tasked with building a ML Bias Debugging tool that allows people
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+.support {
+  align-items: center;
+  background: tomato;
+  color: #fff;
+  display: flex;
+  font-size: .9rem;
+  padding: 0 10px 0 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: auto;
+  z-index: 100;
+}
+.support a {
+  color: #fff;
+  padding: 10px 0;
+  text-decoration: none;
+}
+@supports (display: grid) {
+  .support {
+    background: #058a6e;
+    right: 40px;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    transition: right .5s ease-in-out, -webkit-transform .5s ease-in-out;
+    transition: right .5s ease-in-out, transform .5s ease-in-out;
+    transition: right .5s ease-in-out, transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  }
+  .support:hover {
+    right: 0;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+.support svg {
+  fill: #ffffff;
+  height: 30px;
+  margin-right: 5px;
+  padding: 5px;
+  width: 30px;
+}
+
+.unsupported {
+  display: block;
+}
+@supports (display: grid) {
+  .unsupported {
+    display: none;
+  }
+}
+
+.supported {
+  display: none;
+}
+@supports (display: grid) {
+  .supported {
+    display: block;
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 60em) {
+  main {
+    justify-content: flex-end;
+  }
+}
+@supports (display: grid) {
+  main {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 60em) {
+    main {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@media (min-width: 60em) {
+  .intro {
+    flex: 0 0 calc(50% - 3rem);
+    margin-left: calc(25% - 3rem);
+  }
+}
+@supports (display: grid) {
+  .intro {
+    grid-column: 1 / span 2;
+  }
+  @media (min-width: 60em) {
+    .intro {
+      grid-column: 2 / span 2;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+@media (min-width: 60em) {
+  .summary {
+    order: 1;
+  }
+}
+@supports (display: grid) {
+  .summary {
+    grid-column: 1 / span 2;
+  }
+  @media (min-width: 60em) {
+    .summary {
+      grid-column: 4 / span 1;
+    }
+  }
+}
+
+@supports (display: grid) {
+  .post-content {
+    grid-column: 1 / span 2;
+  }
+  @media (min-width: 60em) {
+    .post-content {
+      grid-column: 2;
+    }
+  }
+}
+@media (min-width: 60em) {
+  .post-content {
+    flex: 0 0 calc(50% - 3rem);
+  }
+  @supports (display: grid) {
+    .post-content {
+      grid-column: 2 / span 2;
+    }
+  }
+}
+
+.byline,
+.social {
+  flex: 0 0 calc(50% - 3rem);
+}
+@media (min-width: 60em) {
+  @supports (display: flex) {
+    .byline,
+    .social {
+      flex: 0 0 calc(25% - 3rem);
+    }
+  }
+}
+
+/* // Styles for fun
+// ------------------------------------------------- */
+body {
+  background: #fff;
+  color: #5a5c6c;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 1rem;
+}
+
+div {
+  margin: 0.5rem;
+  padding: 0 1rem;
+}
+@media (min-width: 60em) {
+  @supports (display: flex) {
+    div {
+      flex: 0 0 calc(25% - 3rem);
+    }
+  }
+}
+div:hover {
+  background-color: #fbf9fa;
+}
+
+.page-title {
+  color: #7a1f5c;
+  font-size: calc(3rem + .25vw);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 1rem auto;
+  max-width: calc(70rem + .25vw);
+  text-align: center;
+}
+
+.post-title {
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+  .post-title:first-letter {
+    color: #7a1f5c;
+    font-weight: 700;
+    initial-letter: 2;
+    -webkit-initial-letter: 2;
+  }
+}
+
+h2 {
+  line-height: 1.2;
+}
+
+p,
+.social a,
+h3 {
+  margin-top: 1rem;
+}
+
+a {
+  color: #bf4080;
+}
+a:hover {
+  color: #7c1d46;
+}
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+}
+.social a {
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.meta {
+  font-family: Georgia, serif;
+  font-size: calc(0.7rem + 0.25vw);
+  font-style: italic;
+}
+
+</style>
+
+<header>
+		<h1 class="page-title">Building an Interactive Data Dashboard with Bokeh</h1>
+</header>
+<main>
+	<div class="intro">
+		<h1 class="post-title">Some words</h1>
+	</div>
+	<div class="byline">
+		<p class="meta">tags: Algorithmic Fairnessdata visualizationinsights</p>
+	</div>
+	<div class="social">
+		<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Hello%20world"
+  data-size="large"><span class="fa fa-twitter"></span></a>
+		
+		<a href="https://facebook.com/#"><span class="fa fa-facebook-square"></span></a>
+
+		<a href="https://plus.google.com/#"><span class="fa fa-google-plus-square"></span></a>
+	</div>
+	
+	<div class="summary">
+		<h3>TL;DR Summary</h3>
+		<p>This is a one-line summary.</p>
+	</div>
+	
+	<div class="post-content">		
+	
+		<p><p>This summer, I was tasked with building a ML Bias Debugging tool that allows people
 to analyze which features in their datasets were introducing bais to their Machine
 Learning models. Basically, we were trying to develop an interactive dashboard similar to 
 <a href="http://vega.github.io/voyager/">voyager</a> and <a href="http://vega.github.io/polestar/">polestar</a>,
@@ -13,5 +281,12 @@ which provided elegant graphics with lightning interactivity over very large dat
 
 <p>I think Bokeh should be in every data scientist’s toolkit. Extracting insights from big data and conveying them to 
 the general public has been an increasingly important task, yet an often overlooked component of the data engineering pipeline. The next vast breakthrough of AI might lie in the ability to invite people and actually involve them in the process of gaining knowledge from data. Better and more powerful data dashboards are likely needed by researchers, domain experts, and the general public alike.</p>
+
+</p>
+
+	</div>
+</main>
+
+
 
 
