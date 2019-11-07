@@ -1,7 +1,3 @@
----
-
----
-
 <style>
 @import url("/assets/css/font.css");
 .support {
@@ -242,18 +238,18 @@ a:hover {
 
 </style>
 
-<h1>{{ page.categories }}</h1>
-<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+<h1>Tutorial</h1>
+<p>17 Aug 2019 - Ziwei Gu</p>
 
 <header>
-		<h1 class="page-title">{{ page.title }}</h1>
+		<h1 class="page-title">Let's finally get those "-jectivity"s right</h1>
 </header>
 <main>
 	<div class="intro">
-		<h1 class="post-title">{{ page.subtitle }}</h1>
+		<h1 class="post-title">Injective, surjective, and bijective</h1>
 	</div>
 	<div class="byline">
-		<p class="meta">tags: {{ page.tags }}</p>
+		<p class="meta">tags: Linear Algebra</p>
 	</div>
 	<div class="social">
 		<a class="twitter-share-button"
@@ -267,12 +263,59 @@ a:hover {
 	
 	<div class="summary">
 		<h3>TL;DR Summary</h3>
-		<p>{{ page.summary }}</p>
+		<p>Cool facts about some important function properties.</p>
 	</div>
 	
 	<div class="post-content">		
 	
-		<p>{{ content }}</p>
+		<p><p>Definitions:</p>
+
+<ul>
+  <li><strong>null space</strong> of T: null T = {v ∈ V: Tv = 0} (stuff in the original vector space that’s mapped to 0 by T)</li>
+  <li><strong>range</strong> of T: range T = {Tv: v ∈ V} (all the resulting vectors after the mapping T)</li>
+  <li>A function T: V -&gt; W is <strong>injective</strong> if Tu = Tv implies u = v.</li>
+  <li>A function T: V -&gt; W is <strong>surjective</strong> if its range equals W.</li>
+  <li>An <strong>isomorphism</strong> is an invertible (injective + surjective) linear map.</li>
+  <li>Two vector spaces are isomorphic if there is an isomorphism from one vector space onto the other one.</li>
+</ul>
+
+<p>Facts:</p>
+
+<ul>
+  <li>
+    <p>A linear map is injective iff null T = {0}.
+<span style="color:gray">[Proof Idea: if v ∈ null T then T(v) = 0 = T(0) =&gt; v = 0 so null T ⊆ {0}; other direction trivial.]</span></p>
+  </li>
+  <li>
+    <p>Rank-Nullity: if T ∈ L(V, W) then dim V = dim null T + dim range T</p>
+  </li>
+  <li>
+    <p>A map to a smaller dimensional space is not injective. (“smaller” as measured by <em>dimension</em>)
+<span style="color:gray">[Proof Idea: using Rank-Nullity]</span></p>
+  </li>
+  <li>
+    <p>A map to a larger dimensional space is not surjective.</p>
+  </li>
+  <li>
+    <p>If T is invertible, it’s inverse is unique.</p>
+  </li>
+  <li>
+    <p>Two finite-dimensional vector spaces over F are isomorphic if and only if they have the same dimension. 
+<span style="color:gray">[Proof Idea: consider T: V -&gt; W; =&gt;: using Rank-Nullity; &lt;=: denote basis of V, W. Apply T to the linear combination of the basis of V, which results in the same linear combination of the basis of W, we can show T is surjective and injective, and is thus invertible.]</span></p>
+  </li>
+  <li>
+    <p>L(V, W) and F<sup>m,n</sup> are isomorphic</p>
+  </li>
+  <li>
+    <p>dim F<sup>m,n</sup> = mn 
+<span style="color:gray">[Proof Idea: m-by-n matrices that have 0 in all entries except for a 1 in one entry form a basis of F<sup>m,n</sup>. How many of them are there?]</span></p>
+  </li>
+  <li>
+    <p>Based on the previous two facts, dim L(V, W) = (dim V)(dim W)</p>
+  </li>
+</ul>
+
+</p>
 
 	</div>
 </main>
