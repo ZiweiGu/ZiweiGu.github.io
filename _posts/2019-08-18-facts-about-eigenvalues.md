@@ -72,7 +72,7 @@ hence the same eigenvalue.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <=> dim V = dim E(&lambda;<sub>1</sub>, T) + ... + dim E(&lambda;<sub>m</sub>, T)
 
-- If T has dim V (enough) distinct eigenvalues, then T is diagonalizable.
+- If T has dim V (enough) distinct eigenvalues, then T is diagonalizable. (The converse is not true, as the diagonalizable identity operator only has only 1 eigenvalue &lambda; = 1)
 
 
 

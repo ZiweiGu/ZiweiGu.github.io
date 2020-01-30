@@ -1,8 +1,32 @@
-<nav>
+<!-- <nav>
   <ul id="nav_ul">
     <li id="main_page"><a href="/">Ziwei Gu</a></li>
     {% for item in site.data.navigation %}
       <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
     {% endfor %}
   </ul>
+</nav> -->
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="/">Ziwei Gu</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+
+      {% for item in site.data.navigation %}
+        <li  {% if page.url == item.link %}class="nav-item active"{% else %}class="nav-item"{% endif %}><a class="nav-link" href="{{ item.link }}">{{ item.name }}</a></li>
+      {% endfor %}
+<!--       <li class=>
+        <a  href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li> -->
+
+    </ul>
+
+  </div>
 </nav>
