@@ -3,7 +3,7 @@ layout: post
 title: Facts about Eigenvalues
 subtitle: Hints on proofs also included
 author: Ziwei Gu
-categories: [Tutorial]
+categories: [Math Notes]
 tags: [Linear Algebra]
 publish_date: 08/18/2019
 summary: Cool facts about eigenvalues - the most important topic in linear algebra.

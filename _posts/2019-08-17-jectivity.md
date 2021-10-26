@@ -3,7 +3,7 @@ layout: post
 title: Let's finally get those "-jectivity"s right
 subtitle: Injective, surjective, and bijective
 author: Ziwei Gu
-categories: [Tutorial]
+categories: [Math Notes]
 tags: [Linear Algebra]
 publish_date: 08/17/2019
 summary: Cool facts about some important function properties.
