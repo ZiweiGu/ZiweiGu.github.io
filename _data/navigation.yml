@@ -1,8 +1,6 @@
 - name: Home
   link: /
-# - name: About
-#   link: /about.html
 - name: Blog
   link: /blog.html
 - name: Misc
-  link: /project_page.html
+  link: /project.html

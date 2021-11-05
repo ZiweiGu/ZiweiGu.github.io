@@ -1,0 +1,448 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+
+@import url("/assets/css/font.css");
+.support {
+  align-items: center;
+  background: tomato;
+  color: #fff;
+  display: flex;
+  font-size: .9rem;
+  padding: 0 10px 0 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: auto;
+  z-index: 100;
+}
+.support a {
+  color: #fff;
+  padding: 10px 0;
+  text-decoration: none;
+}
+@supports (display: grid) {
+  .support {
+    background: #058a6e;
+    right: 40px;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    transition: right .5s ease-in-out, -webkit-transform .5s ease-in-out;
+    transition: right .5s ease-in-out, transform .5s ease-in-out;
+    transition: right .5s ease-in-out, transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  }
+  .support:hover {
+    right: 0;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+.support svg {
+  fill: #ffffff;
+  height: 30px;
+  margin-right: 5px;
+  padding: 5px;
+  width: 30px;
+}
+
+.unsupported {
+  display: block;
+}
+@supports (display: grid) {
+  .unsupported {
+    display: none;
+  }
+}
+
+.supported {
+  display: none;
+}
+@supports (display: grid) {
+  .supported {
+    display: block;
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 60em) {
+  main {
+    justify-content: flex-end;
+  }
+}
+@supports (display: grid) {
+  main {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 60em) {
+    main {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@media (min-width: 60em) {
+  .intro {
+    flex: 0 0 calc(50% - 3rem);
+    margin-left: calc(25% - 3rem);
+  }
+}
+@supports (display: grid) {
+  .intro {
+    grid-column: 1 / span 2;
+  }
+  @media (min-width: 60em) {
+    .intro {
+      grid-column: 2 / span 2;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+@media (min-width: 60em) {
+  .summary {
+    order: 1;
+  }
+}
+@supports (display: grid) {
+  .summary {
+    grid-column: 1 / span 2;
+  }
+  @media (min-width: 60em) {
+    .summary {
+      grid-column: 4 / span 1;
+    }
+  }
+}
+
+@supports (display: grid) {
+  .post-content {
+    grid-column: 1 / span 2;
+  }
+  @media (min-width: 60em) {
+    .post-content {
+      grid-column: 2;
+    }
+  }
+}
+@media (min-width: 60em) {
+  .post-content {
+    flex: 0 0 calc(50% - 3rem);
+  }
+  @supports (display: grid) {
+    .post-content {
+      grid-column: 2 / span 2;
+    }
+  }
+}
+
+.byline {
+  flex: 0 0 calc(50% - 3rem);
+}
+@media (min-width: 60em) {
+  @supports (display: flex) {
+    .byline {
+      flex: 0 0 calc(25% - 3rem);
+    }
+  }
+}
+
+/* // Styles for fun
+// ------------------------------------------------- */
+body {
+  background: #fff;
+  color: #5a5c6c;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+/*  margin: 1rem;*/
+}
+
+/*div {
+  margin: 0.5rem;
+  padding: 0 1rem;
+}*/
+@media (min-width: 60em) {
+  @supports (display: flex) {
+    div {
+      flex: 0 0 calc(25% - 3rem);
+    }
+  }
+}
+div:hover {
+  background-color: #fbf9fa;
+}
+
+.page-title {
+  color: #7a1f5c;
+  font-size: calc(3rem + .25vw);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 1rem auto;
+  max-width: calc(70rem + .25vw);
+  text-align: center;
+}
+
+.post-title {
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+  .post-title:first-letter {
+    color: #7a1f5c;
+    font-weight: 700;
+    initial-letter: 2;
+    -webkit-initial-letter: 2;
+  }
+}
+
+h2 {
+  line-height: 1.2;
+}
+
+.meta {
+  font-family: Georgia, serif;
+  font-size: calc(0.7rem + 0.25vw);
+  font-style: italic;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px
+}
+
+footer {
+  bottom: 0;
+  width: 101%;
+  height: 135px;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px
+}
+
+</style>
+
+
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="/">Ziwei Gu</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+
+      
+        <li  class="nav-item"><a class="nav-link" href="/">Home</a></li>
+      
+        <li  class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+      
+        <li  class="nav-item"><a class="nav-link" href="/project.html">Misc</a></li>
+      
+
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
+<header>
+		<h1 class="page-title">Facts about Eigenvalues</h1>
+</header>
+<main>
+	<div class="intro">
+		<h1 class="post-title">Hints on proofs also included</h1>
+	</div>
+
+	<div class="byline">
+    <p>18 Aug 2019 - Ziwei Gu</p>
+		<p class="meta">tags: Linear Algebra</p>
+	</div>
+	
+	<div class="summary">
+		<p><strong>TL;DR</strong>: Cool facts about eigenvalues - the most important topic in linear algebra.</p>
+	</div>
+	
+	<div class="post-content">		
+	
+		<p><p>First, some clarifications. We are considering linear maps from a finite-dimensional vector space to itself (also called an <strong>operator</strong> L(V)), as opposed to linear maps from one vector space to another vector space.</p>
+
+<p>Suppose <em>V</em> is a finite-dimensional vector space, <em>T</em> ∈ <em>L</em>(<em>V</em>), and λ ∈ <em>F</em>.</p>
+
+<p>Some definitions to know:</p>
+<ul>
+  <li>
+    <p>Invariant subspace: U is invariant under T if T|<sub>U</sub> is an operator on U.</p>
+  </li>
+  <li>
+    <p>λ ∈ <em>F</em>  is an eigenvalue of T if ∃ v ∈ V s.t. v ≠ 0 and Tv = λv.</p>
+  </li>
+  <li>
+    <p>The eigenspace of T corresponding to λ, E(λ, T) = null(T - λI) (the set of all eigenvectors of T corresponding to λ, along with the 0 vector.)</p>
+  </li>
+  <li>
+    <p>Concepts from <a href="/2019/08/17/jectivity.html">a previous post</a></p>
+  </li>
+</ul>
+
+<p><strong>Basics</strong></p>
+
+<ul>
+  <li>
+    <p>A linear map is invertible if and only if it is injective and surjective.</p>
+  </li>
+  <li>
+    <p>For operators on a finite-dimensional vector space, however, either injectivity or surjectivity alone implies the other condition, and thus implies invertibility. (proved using Rank theorem)</p>
+  </li>
+  <li>
+    <p>If λ is an eigenvalue of T, then by definition v ∈ ker(T - λI) so ker(T - λI) ≠ 0. Hence, T - λI is not injective (or surjective). That is, T - λI is not invertible, det(T - λI) = 0.</p>
+  </li>
+  <li>
+    <p>Eigenvectors corresponding to <strong>distinct</strong> eigenvalues are linearly independent.</p>
+  </li>
+  <li>
+    <p>Each operator on V has at most dim V distinct eigenvalues.</p>
+  </li>
+  <li>
+    <p>If A is an n ×n matrix, then the sum of the n eigenvalues of A is the trace of A and the
+product of the n eigenvalues is the determinant of A.</p>
+  </li>
+  <li>
+    <p>If λ is an eigenvalue of the T, λ<sup>2</sup> is an eigenvalue of T<sup>2</sup>.</p>
+  </li>
+  <li>
+    <p>n × n matrix A and its transpose A<sup>T</sup> have the same eigenvalues.</p>
+  </li>
+  <li>
+    <p>Suppose A and B are similar matrices. Then A and B have the same characteristic polynomial and
+hence the same eigenvalue.</p>
+  </li>
+  <li>
+    <p>If λ is an eigenvalue of A, then the dimension of E<sub>λ</sub> is at most the multiplicity of λ.</p>
+  </li>
+  <li>
+    <p>If λ<sup>*</sup> is an eigenvalue of A, then the multiplicity of λ<sup>*</sup> is at least the dimension of the eigenspace E<sub>λ<sup>*</sup></sub> .</p>
+  </li>
+</ul>
+
+<p><strong>Intermediate</strong></p>
+
+<ul>
+  <li>
+    <p>Any two polynomials of an operator commute.</p>
+  </li>
+  <li>
+    <p>Every operator on a finite-dimensional, nonzero, complex vector space has an eigenvalue.</p>
+  </li>
+  <li>
+    <p>Over C, every operator has an upper-triangular matrix</p>
+  </li>
+  <li>
+    <p>Suppose T ∈ L(V) has an upper-triangular matrix with respect to some basis of V, then T is invertible if and only if all the entries on the diagonal of that upper-triangular matrix are nonzero;</p>
+  </li>
+  <li>
+    <p>Suppose T ∈ L(V) has an upper-triangular matrix with respect to some basis of V, then the eigenvalues of T are precisely the entries on the diagonal of that upper-triangular matrix.</p>
+  </li>
+  <li>
+    <p>Let λ<sub>1</sub>, …, λ<sub>m</sub> denote the distinct eigenvalues of T. Then, T is diagonalizable</p>
+  </li>
+</ul>
+
+<p>         &lt;=&gt; V has a basis consisting of eigenvectors of T</p>
+
+<p>         &lt;=&gt; ∃ 1-dimensional subspaces U<sub>1</sub>, …, U<sub>n</sub> of V, each invariant under T, such that V          = U<sub>1</sub> ⊕ … ⊕ U<sub>n</sub></p>
+
+<p>         &lt;=&gt; V = E(λ<sub>1</sub>, T) ⊕ … ⊕ E(λ<sub>m</sub>, T)</p>
+
+<p>         &lt;=&gt; dim V = dim E(λ<sub>1</sub>, T) + … + dim E(λ<sub>m</sub>, T)</p>
+
+<ul>
+  <li>If T has dim V (enough) distinct eigenvalues, then T is diagonalizable. (The converse is not true, as the diagonalizable identity operator only has only 1 eigenvalue λ = 1)</li>
+</ul>
+
+</p>
+
+	</div>
+</main>
+
+<footer class="container">
+   <hr>
+   <p>&copy; Ziwei Gu 2021</p>
+</footer>
+
+
+

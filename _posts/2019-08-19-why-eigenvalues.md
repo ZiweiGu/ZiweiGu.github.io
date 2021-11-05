@@ -3,7 +3,6 @@ layout: post
 title: Why Eigenvalues Are So Important  
 subtitle: What is so special about eigenvalues?
 author: Ziwei Gu
-categories: [Math Notes]
 tags: [Linear Algebra]
 publish_date: 08/19/2019
 summary: Eigenvalues is perhaps the most important topic of linear algebra. Also called characteristic values, they are intrinsic properties of a linear transformation.  
