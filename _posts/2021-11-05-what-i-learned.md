@@ -1,7 +1,7 @@
 ---
 layout: post
-title: What I learned from doing research
-subtitle: And from WWW and CHI
+title: What I Learned from Doing Research
+subtitle: Take-aways not specific to HCI
 author: Ziwei Gu
 tags: [Reflection]
 publish_date: 11/05/2021
@@ -23,7 +23,7 @@ I loved every bit of my 2+ years of research experience at Cornell. I was also g
 - A procedure I found effective to start and complete a research project (after having a rough research idea in mind): 
 	1. **Have a mental model** of what a successful project looks like. (Yes, this is the first step!)
 	2. Do a lot of literature review and write a **research proposal**.
-	3. Have your advisor read the proposal and have an **open and objective** discussion with them
+	3. Have your advisor read the proposal and have an **open and objective** discussion with them.
 	4. (If both of you are passionate) Start carving out the general framework in Overleaf. (**Writing** is a great way to get you started and help organize thought.)
 	5. **Make plans** on tasks. To-do list, timelines, milestones. **Prioritize**!
 	6. Design and Implementat. Code, test, iterate. 
