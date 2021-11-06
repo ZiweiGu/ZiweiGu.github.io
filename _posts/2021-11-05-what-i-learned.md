@@ -16,9 +16,9 @@ I loved every bit of my 2+ years of research experience at Cornell. I was also g
 
 - **"Start simple, fail fast, fail early."**
 
-- HCI is centered on humans. **Put users' need first!** It's easier said than done because we developers tend to get lost in what we can do, what's new, what's cool, etc. For example, when displaying data, we must resist the temptation to show all we can compute in order to reduce information overload. One method I like to use is to stand in users' shoes and ask what they’re gonna do with all these information. 
+- HCI is centered on humans. **Put users' need first!** It's easier said than done because we developers tend to get lost in what we can do, what's new, what's cool, etc. For example, when displaying data, we must resist the temptation to show everything we have computed to reduce information overload for users. One method I like to use is to stand in users' shoes and ask what they’re gonna do with all those information. 
 
-- "It's as easy to do something big as it is to do something small" used to make no sense to me, but not anymore. **Pick impactful research ideas** worthy of your pursuit (e.g those that have a potential to fundamentally change some previous beliefs, to influence a large number of people, to inspire a new class of systems, you name it).
+- **Pick impactful research ideas** worthy of your pursuit (e.g those that have a potential to fundamentally change some previous beliefs, to influence a large number of people, to inspire a new class of systems, you name it). "It's as easy to do something big as it is to do something small."
 
 - A procedure I found effective to start and complete a research project (after having a rough research idea in mind): 
 	1. **Have a mental model** of what a successful project looks like (Yes, this is the first step!)
@@ -32,7 +32,7 @@ I loved every bit of my 2+ years of research experience at Cornell. I was also g
 
 **Communication**
 
-- If there's someone you admire, email them to ask for advice or a meeting. You never know who will be willing to meet with you. If there's an opportunity you are excited about, take immediate actions to get closer to it. You never know what you can take home. I used to be shy about reaching out, but using this mindset I have met and talked to board members of Cornell, CXO of Lyft, chairs of CHI, learned important life lessions and formed long-term connections. So **be bold**.
+- If there's someone you admire, email them to ask for advice or a meeting. You never know who will be willing to meet with you. If there's an opportunity you are excited about, take immediate actions to get closer to it. You never know what you can take home. I used to be shy about reaching out, but by forcing myself out of mycomfort zone I have met and talked to board members of Cornell, CXO of Lyft, chairs of CHI, learned important life lessions and formed long-term connections. So **be bold**.
 
 - A tip on reaching out to people: people are always more interested in **their own problems** than your problems. So if you want to reach someone, start with what they are dealing with. A practical example: email a professor by starting with *their* research, not yours. 
 
