@@ -42,7 +42,7 @@ I loved every bit of my 2+ years of research experience at Cornell. I was also g
 
 **Motivation and Productivity**
 
-- I admit that I was complacent for a while after securing an internship at Lyft, for which I deeply regretted. It turned out that **nothing is forever**. Our goals and expectations are constantly changing, so we need to constantly seek ways to improve or even reinvent ourselves.
+- I felt somewhat complacent for a while after landing an internship offer from Lyft, and I deeply regretted it. It turned out that **nothing is forever**. Our goals and expectations are constantly changing, so we need to constantly seek ways to improve or even reinvent ourselves.
 
 - If there's a contest (or anything competitive), and you're still hesitating to participate. then you'd better not do it. Remember, your competitors are **100% all in**, devoting everything they have to it, so you are bound to lose unless you can beat them from a higher dimension. 
 
