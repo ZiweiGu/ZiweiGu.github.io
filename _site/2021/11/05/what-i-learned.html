@@ -321,36 +321,89 @@ footer {
 
 
 <header>
-		<h1 class="page-title">Why Eigenvalues Are So Important</h1>
+		<h1 class="page-title">What I learned from doing research</h1>
 </header>
 <main>
 	<div class="intro">
-		<h1 class="post-title">What is so special about eigenvalues?</h1>
+		<h1 class="post-title">And from WWW and CHI</h1>
 	</div>
 
 	<div class="byline">
-    <p>19 Aug 2019 - Ziwei Gu</p>
-		<p class="meta">tags: Linear Algebra</p>
+    <p>05 Nov 2021 - Ziwei Gu</p>
+		<p class="meta">tags: Reflection</p>
 	</div>
 	
 	<div class="summary">
-		<p><strong>TL;DR</strong>: Eigenvalues is perhaps the most important topic of linear algebra. Also called characteristic values, they are intrinsic properties of a linear transformation.</p>
+		<p><strong>TL;DR</strong>: Some of my thoughts on research, project management, communication, and others.</p>
 	</div>
 	
 	<div class="post-content">		
 	
-		<p><p>Okay, let’s bring out the question most professors would not bother to explain: why do we care so much about vectors that become a multiple of themselves when you multiply by a matrix?</p>
+		<p><p>I loved every bit of my 2+ years of research experience at Cornell. I was also grateful for the opportunity to participate in top conferences like WWW’21, CHI’20, and CHI’21. Overall, the experiences are life-changing, and I’d like to summarize some of my learnings here (constantly updating) as a reference to others and to myself.</p>
 
-<p>Short (and very shallow) answer: Applications.</p>
+<p><strong>Research Project Management</strong></p>
 
-<p>Eigenvalues are essential in physical applications like rotations, image compression, and quantum mechanics, and numerous data science applications (PCA, markov chains, latent variable models, and much more…) They are not only used to explain natural occurrences, but also to discover new and better designs for the future.</p>
+<ul>
+  <li>
+    <p>When a project involves significant system building, it’s a great idea to spend enough time <strong>designing and brainstorming</strong> before implementing. It’s tempting to start coding early and deliver a prototype quickly so that you can cheerfully declare “we are almost done!” However, it’s highly risky as it often leaves you in a dangerous situation where things don’t work as expected and you are stuck with hours and hours of wasted work. Plan well and only start implementing when the team has a clear vision of the system.</p>
+  </li>
+  <li>
+    <p><strong>“Start simple, fail fast, fail early.”</strong></p>
+  </li>
+  <li>
+    <p>HCI is centered on humans. <strong>Put users’ need first!</strong> It’s easier said than done because we developers tend to get lost in what we can do, what’s new, what’s cool, etc. For example, when displaying data, we must resist the temptation to show all we can compute in order to reduce information overload. One method I like to use is to stand in users’ shoes and ask what they’re gonna do with all these information.</p>
+  </li>
+  <li>
+    <p>“It’s as easy to do something big as it is to do something small” used to make no sense to me, but not anymore. <strong>Pick impactful research ideas</strong> worthy of your pursuit (e.g those that have a potential to fundamentally change some previous beliefs, to influence a large number of people, to inspire a new class of systems, you name it).</p>
+  </li>
+  <li>
+    <p>A procedure I found effective to start and complete a research project (after having a rough research idea in mind):</p>
+    <ol>
+      <li><strong>Have a mental model</strong> of what a successful project looks like (Yes, this is the first step!)</li>
+      <li>Do a lot of literature review and write a <strong>research proposal</strong></li>
+      <li>Have your advisor read the proposal and have an <strong>open and objective</strong> discussion with them</li>
+      <li>(If both of you are passionate) Start carving out the general framework in Overleaf (<strong>Writing</strong> is a great way to get you started and help organize thought.)</li>
+      <li><strong>Make plans</strong> on tasks. To-do list, timelines, milestones. <strong>Prioritize</strong>!</li>
+      <li>Design and Implementat. Code, test, iterate.</li>
+      <li>Fill out the empty sections in Overleaf from Step 4., finish writing!</li>
+      <li>After submission, <strong>reflect</strong> on the whole process and <strong>take notes</strong> of any thought or feedback.</li>
+    </ol>
+  </li>
+</ul>
 
-<p><strong>A longer and deeper answer</strong>:</p>
+<p><strong>Communication</strong></p>
 
-<p>“A central goal of linear algebra is to show that given an operator T ∈ L(V), there exists a basis of V with respect to which T has a reasonably simple matrix” (e.g. with many 0’s - diagonal matrix). Diagonal matrices are nice because it’s easier to take powers, decompose, visualize, etc.</p>
+<ul>
+  <li>
+    <p>If there’s someone you admire, email them to ask for advice or a meeting. You never know who will be willing to meet with you. If there’s an opportunity you are excited about, take immediate actions to get closer to it. You never know what you can take home. I used to be shy about reaching out, but using this mindset I have met and talked to board members of Cornell, CXO of Lyft, chairs of CHI, learned important life lessions and formed long-term connections. So <strong>be bold</strong>.</p>
+  </li>
+  <li>
+    <p>A tip on reaching out to people: people are always more interested in <strong>their own problems</strong> than your problems. So if you want to reach someone, start with what they are dealing with. A practical example: email a professor by starting with <em>their</em> research, not yours.</p>
+  </li>
+  <li>
+    <p>I found it crucial to <strong>be candid</strong> when discussing research ideas and each other’s work. I used to be leery of saying anything negative about others’ or our collaborative work. After witnessing the power of a group of smart people talking openly with one another in a CHI session, however, I realized they could solve any challenge this way. Now I talk about failures openly and objectively. (But be sure to be friendly and inclusive!)</p>
+  </li>
+  <li>
+    <p>When presenting your research, <strong>sell the problem</strong> you are solving, and <strong>accent the difference</strong> your are making! <strong>Be concise!</strong> Skip any part that is not adding value to your message. Be very careful when adding long sentences to your slides: the only texts on slides should be the “take-home” messages you want your audience to remember.</p>
+  </li>
+</ul>
 
-<p>Furthermore, eigenvalues offer you the power to distinguish among representations. A matrix is simply one way of representing a linear transformation in a particular basis you chose, but the matrix changes when you change the basis. Eigenvalues, on the other hand, are invariant under change of basis. Therefore, they are much more fundamental. They characterize the intrinsic properties about a linear transformation. Math, in some sense, is to find those things intrinsic to the universe. It’s therefore not surprising that eigenvalues are everywhere.</p>
+<p><strong>Motivation and Productivity</strong></p>
 
+<ul>
+  <li>
+    <p>I admit that I was complacent for a while after securing an internship at Lyft, for which I deeply regretted. It turned out that <strong>nothing is forever</strong>. Our goals and expectations are constantly changing, so we need to constantly seek ways to improve or even reinvent ourselves.</p>
+  </li>
+  <li>
+    <p>If there’s a contest (or anything competitive), and you’re still hesitating to participate. then you’d better not do it. Remember, your competitors are <strong>100% all in</strong>, devoting everything they have to it, so you are bound to lose unless you can beat them from a higher dimension.</p>
+  </li>
+  <li>
+    <p>Work is hard, but <strong>“inspired actions”</strong> are not. My friends often ask me how I manage to work long period without being burned out. Well I don’t think I’m “working”, instead I’m trying to take “inspired actions” every day. Truly inspired actions are effortless.</p>
+  </li>
+  <li>
+    <p><strong>Be grateful</strong> every day and let others know your gratitude.</p>
+  </li>
+</ul>
 </p>
 
 	</div>
