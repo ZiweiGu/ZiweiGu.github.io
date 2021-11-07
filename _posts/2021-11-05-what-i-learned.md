@@ -18,7 +18,7 @@ I loved every bit of my 2+ years of research experience at Cornell. I was also g
 
 - HCI is centered on humans. **Put users' need first!** It's easier said than done because we developers tend to get lost in what we can do, what's new, and what's cool. For example, when displaying data, we must resist the temptation to show everything we have computed so that users don't have to suffer from information overload. One method I like to use is to stand in users' shoes and ask what they’re gonna do with all those information. 
 
-- **Pick impactful research ideas** worthy of your pursuit (e.g those that have a potential to fundamentally change some previous beliefs, to influence a large number of people, to inspire a new class of systems, etc.). "It's as easy to do something big as it is to do something small."
+- **Pick impactful research ideas** worthy of your pursuit (e.g those that have a potential to fundamentally change some previous beliefs, to influence a large number of people, to inspire a new class of systems, etc.). Usually, "it's as easy to do something big as it is to do something small."
 
 - A procedure I found effective to start and complete a research project (after having a rough research idea in mind): 
 	1. **Have a mental model** of what a successful project looks like. (Yes, this is the first step!)
@@ -46,6 +46,6 @@ I loved every bit of my 2+ years of research experience at Cornell. I was also g
 
 - Worthy pursuits require **100% effort**. If there's a contest (or anything competitive), and you are not 100% certain whether to participate, then you'd better not participate. While you are not going to all in it, your competitors are, many of whom are set to devote everything they have to it. Thus, you are already out of the game unless you can beat them from a higher dimension. 
 
-- Work is hard, but **"inspired actions"** are not. My friends often ask me how I manage to work long period without being burned out. To be honest, I don't think I'm "working", instead I'm trying to take "inspired actions" every day. Truly inspired actions are effortless.
+- Work is hard, but **"inspired actions"** are not. My friends often ask me how I manage to work long period without being burned out. To be honest, I don't think I "work", instead I try to take "inspired actions" every day. Truly inspired actions are effortless.
 
 - **Be grateful** every day and let others know your gratitude.
