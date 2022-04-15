@@ -8,7 +8,7 @@ publish_date: 11/05/2021
 summary: Some of my thoughts on research, project management, communication, and others.
 ---
 
-I loved every bit of my 2+ years of research experience at Cornell. I was also grateful for the opportunity to participate in top conferences like WWW'21, CHI'20, and CHI'21. Overall, the experiences are life-changing, and I'd like to summarize some of my learnings here (constantly updating) as a reference to others and to myself.
+I loved every bit of my 2+ years of research experience at Cornell. I was also grateful for the opportunity to participate in top conferences including WWW'21, CHI'20, and CHI'21. Overall, the experiences are life-changing, and I'd like to summarize some of my learnings here (constantly updating) as a reference to others and to myself.
 
 **Research Project Management**
 
