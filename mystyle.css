@@ -1,3 +1,11 @@
+/* Layout knobs: change a number and save to see the effect */
+:root {
+  --page-max-width: 1320px;  /* both columns together; narrower windows just fill the window */
+  --sidebar-width: 320px;    /* left column on laptop and desktop screens; the six icons need about 300px */
+  --column-gap: 80px;        /* extra white space between the two columns, on laptop and desktop screens */
+  --photo-max-width: 280px;  /* profile photo */
+}
+
 main {
   padding-top: 3.5rem;
 }
@@ -6,6 +14,66 @@ footer {
   bottom: 0;
   width: 101%;
   height: 135px;
+}
+
+/* Overrides Bootstrap's fixed .container widths, which cap the page at 1140px */
+.container {
+  max-width: var(--page-max-width);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /* The main column is .col-md so it grows into whatever space this leaves */
+  .sidebar {
+    flex: 0 0 30%;
+  }
+
+  .main-column {
+    padding-left: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    flex-basis: var(--sidebar-width);
+  }
+
+  .main-column {
+    padding-left: var(--column-gap);
+  }
+}
+
+/* Phones: each paper's image sits above its text; !important beats the cells' inline width and padding */
+@media (max-width: 767.98px) {
+  .publications,
+  .publications tbody,
+  .publications tr,
+  .publications td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .publications td:first-child {
+    padding-bottom: 0 !important;
+  }
+
+  .publications .one,
+  .publications .two {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+  .publications img {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+  }
 }
 
 /* latin-ext */
@@ -202,8 +270,10 @@ strong {
 }
 
 heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: Crimson Pro, serif;
   font-size: 22px;
+  font-weight: 600;
+  color: #494949;
 }
 
 papertitle {
